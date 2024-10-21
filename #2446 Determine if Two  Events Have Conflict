@@ -1,0 +1,9 @@
+class Solution:
+    def haveConflict(self, event1: List[str], event2: List[str]) -> bool:
+        event1start = event1[0].split(":")
+        event1end = event1[1].split(":")
+        event2start = event2[0].split(":")
+        event2end = event2[1].split(":")
+
+        return False if event2start > event1end or event1start > event2end else True   
+ 
