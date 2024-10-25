@@ -1,0 +1,12 @@
+class Solution:
+    def canJump(self, nums: List[int]) -> bool:
+        gas = 0  
+        
+        for i in range(len(nums)):
+            if gas < i:  
+                return False
+            
+            
+            gas = max(gas, i + nums[i])
+            
+        return True 
